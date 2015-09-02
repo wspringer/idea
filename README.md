@@ -13,10 +13,10 @@ IntellJ actually comes with a way to open a file from the commandline. However, 
 
 ### Step 1: installing it
 
-You will first of all have to install it:
+You will first of all have to install it. And since there *is* already an `idea` npm in the NPM registry and I was too lazy to change the name, you should install it from source by checking out this project and install it by entering:
 
 ```bash
-npm install -g idea
+npm install -g
 ```
 
 Just to be sure: this doesn't install IntellJ (doh). It does however install the `idea` command. 
@@ -25,6 +25,8 @@ Just to be sure: this doesn't install IntellJ (doh). It does however install the
 
 I'll advise you to first create a new profile. Then in the **Semantic history** section of the profile, select the `Run command` option and enter
 `idea "\1:\2"` as the command. You will notice that I actually have that preceeded by `. ~/.zshrc`, which is making sure my [nvm](https://github.com/creationix/nvm) environment is configured before running this.
+
+![iTerms2 Dialog](./dialog.png)
 
 ### Step 3: there is no step 3
 
