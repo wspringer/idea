@@ -1,0 +1,19 @@
+{
+  "name": "idea",
+  "version": "0.1.0",
+  "description": "Opens a file in IntellJ",
+  "bin": {
+    "idea": "./bin/idea"
+  },
+  "keywords": [
+    "intellij"
+  ],
+  "author": "Wilfred Springer",
+  "license": "ISC",
+  "dependencies": {
+    "findup-sync": "^0.2.1"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.3"
+  }
+}

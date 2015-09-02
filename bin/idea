@@ -1,0 +1,30 @@
+#!/usr/bin/env coffee
+
+path = require 'path'
+exec = require('child_process').exec
+findup = require 'findup-sync'
+
+console.info 'ARGS', process.argv
+
+intellij = "/Applications/IntelliJ\\ IDEA\\ 14.app/Contents/MacOS/idea"
+
+args = process.argv.slice(2)
+arg = args[0]
+if arg?
+  [name, line, col] = arg.split ':'
+  location = path.resolve process.cwd(), name
+
+  ideadir = findup '.idea', 
+    cwd: path.dirname(location)
+
+  projectdir = 
+    path.resolve ideadir, '..'
+
+  cmd = 
+    if line?
+      "#{intellij} #{projectdir} --line #{line} '#{location}'"
+    else
+      "#{intellij} '#{location}'"
+
+  exec cmd
+
