@@ -6,7 +6,7 @@ findup = require 'findup-sync'
 
 console.info 'ARGS', process.argv
 
-intellij = "/Applications/IntelliJ\\ IDEA\\ 14.app/Contents/MacOS/idea"
+intellij = "/Applications/IntelliJ\\ IDEA\\ 15.app/Contents/MacOS/idea"
 
 args = process.argv.slice(2)
 arg = args[0]
